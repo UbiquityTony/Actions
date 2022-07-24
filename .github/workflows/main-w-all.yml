@@ -10,8 +10,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
-    #runs-on: macos-12
+    #runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
         - name: 'Checkout codes'
@@ -26,7 +26,7 @@ jobs:
             pip3 install -r VPS/requirements.txt
             pip3 install undetected-chromedriver
             yes | pip3 uninstall selenium
-            yes | pip3 install selenium==4.2.0
+            pip3 install selenium==4.2.0
             
         - name: 'Renew'
           env:
