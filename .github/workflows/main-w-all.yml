@@ -23,9 +23,11 @@ jobs:
 
         - name: 'Install requirements'
           run: |
-            pip3 install -r VPS/requirements.txt -y
+            pip3 install urllib3 -y
+            pip3 install requests
+            pip3 install helium
             pip3 install undetected-chromedriver -y
-            yes | pip3 uninstall selenium -y
+            pip3 uninstall selenium -y
             pip3 install selenium==4.2.0 -y
             
         - name: 'Renew'
